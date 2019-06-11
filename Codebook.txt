@@ -1,0 +1,84 @@
+Variable name: description
+--------------------------
+
+subject: ID for the subject
+activity: describes the activity
+Domain: tells us if the signal is a time or frequency signal (Time or Freq)
+Instrument: describes the instrument that creates the measures (Accelerometer or Gyroscope)
+Acceleration: describes the signal (Body or Gravity)
+Variable: describes the measure (Mean or Std)
+Jerk: tell us if it was a jerk signal or not
+Magnitude: tell us the magnitude of the signal
+Axis: tells us if the signal is a X, Y, Z axis value
+count: counts the values based on the key
+average: counts the average based on the key
+
+Dataset structure
+-----------------
+  
+$ subject     : int  1 1 1 1 1 1 1 1 1 1 ...
+$ activity    : Factor w/ 6 levels "LAYING","SITTING",..: 1 1 1 1 1 1 1 1 1 1 ...
+$ Domain      : chr  "Freq" "Freq" "Freq" "Freq" ...
+$ Acceleration: chr  "" "" "" "" ...
+$ Instrument  : chr  "Gyroscope" "Gyroscope" "Gyroscope" "Gyroscope" ...
+$ Jerk        : chr  "" "" "" "" ...
+$ Magnitude   : chr  "" "" "" "" ...
+$ Variabele   : chr  "Mean" "Mean" "Mean" "Std" ...
+$ Axis        : chr  "X" "Y" "Z" "X" ...
+$ count       : int  50 50 50 50 50 50 50 50 50 50 ...
+$ average     : num  -0.85 -0.952 -0.909 -0.882 -0.951 ...
+- attr(*, "sorted")= chr  "subject" "activity" "Domain" "Acceleration" ...
+- attr(*, ".internal.selfref")=<externalptr> 
+  
+
+The key of the data table
+-------------------------
+  
+[1] "subject"      "activity"     "Domain"       "Acceleration" "Instrument"   "Jerk"        
+[7] "Magnitude"    "Variabele"    "Axis"
+
+
+The first 6 rows of the dataset
+-------------------------------
+  
+subject activity featDomain featAcceleration featInstrument featJerk featMagnitude featVariable
+1:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>         Mean
+2:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>         Mean
+3:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>         Mean
+4:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>           SD
+5:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>           SD
+6:       1   LAYING       Time             <NA>      Gyroscope     <NA>          <NA>           SD
+featAxis count     average
+1:        X    50 -0.01655309
+2:        Y    50 -0.06448612
+3:        Z    50  0.14868944
+4:        X    50 -0.87354387
+5:        Y    50 -0.95109044
+6:        Z    50 -0.90828466
+
+Summary of variables
+--------------------
+  
+subject                   activity       Domain          Acceleration        Instrument       
+Min.   : 1.0   LAYING            :1980   Length:11880       Length:11880       Length:11880      
+1st Qu.: 8.0   SITTING           :1980   Class :character   Class :character   Class :character  
+Median :15.5   STANDING          :1980   Mode  :character   Mode  :character   Mode  :character  
+Mean   :15.5   WALKING           :1980                                                           
+3rd Qu.:23.0   WALKING_DOWNSTAIRS:1980                                                           
+Max.   :30.0   WALKING_UPSTAIRS  :1980                                                           
+Jerk            Magnitude          Variabele             Axis               count      
+Length:11880       Length:11880       Length:11880       Length:11880       Min.   :36.00  
+Class :character   Class :character   Class :character   Class :character   1st Qu.:49.00  
+Mode  :character   Mode  :character   Mode  :character   Mode  :character   Median :54.50  
+Mean   :57.22  
+3rd Qu.:63.25  
+Max.   :95.00  
+average        
+Min.   :-0.99767  
+1st Qu.:-0.96205  
+Median :-0.46989  
+Mean   :-0.48436  
+3rd Qu.:-0.07836  
+Max.   : 0.97451
+
+
